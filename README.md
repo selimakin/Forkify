@@ -10,3 +10,5 @@ Recipe application with custom recipe uploads developed using JavaScript.
 - Changing servings
 - Bookmarking/Unbookmarking recipes
 - Adding recipes
+
+Project link: https://forkify-selim.netlify.app

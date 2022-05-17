@@ -16,7 +16,7 @@ export const state = {
 
 const createRecipeObject = function (data) {
   const { recipe } = data.data;
-  // let recipe = data.data.recipe;
+
   return {
     id: recipe.id,
     title: recipe.title,
@@ -35,7 +35,6 @@ export const loadRecipe = async function (id) {
     const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
     state.recipe = createRecipeObject(data);
 
-    console.log(state.recipe);
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
